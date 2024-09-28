@@ -1,0 +1,18 @@
+/* assets/css/dark-theme.css */
+
+/* Dark theme styles for the map */
+#map {
+    height: 500px;
+    width: 100%;
+    border: 2px solid #333;
+}
+
+/* Background and text color for dark theme */
+body {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+h1 {
+    color: #f0f0f0;
+}

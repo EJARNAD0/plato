@@ -1,0 +1,564 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+
+#container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background: #35424a;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: #1a5e8b;
+}
+
+.logout {
+    float: right;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+/** feedback */
+#search {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.feedback {
+    margin-top: 20px;
+}
+
+#feedback-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove spacing between table cells */
+    margin-top: 10px;
+}
+
+#feedback-table th, #feedback-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#feedback-table th {
+    background-color: #f2f2f2; /* Light gray background for the header */
+    font-weight: bold;
+}
+
+.feedback-item:hover {
+    background-color: #f9f9f9; /* Light background on hover */
+}
+
+.no-feedback {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
+
+
+/** Log in */
+.login-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 500px;
+    padding: 40px;
+    margin: 20px auto;
+    transform: translate(-50%, -55%);
+    background: rgba(0,0,0,.9);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 15px;
+}
+
+.login-box p:first-child {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 0;
+    font-size: 18px;
+    color: #fff;
+    pointer-events: none;
+    transition: .4s ease;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,100% {
+        left: 100%;
+    }
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,100% {
+        top: 100%;
+    }
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.login-box p:last-child {
+    color: #aaa;
+    font-size: 15px;
+}
+
+.input-group:hover .label, .input:focus {
+    color: #05060fc2;
+}
+
+input[type=submit] {
+    bottom: -100%;
+    border-radius: 5px;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    animation: btn-anim4 1.5s linear infinite;
+    animation-delay: 1.125s;
+}
+
+input[type=submit]:hover {
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Links in the menu */
+#third-submenu a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#third-submenu a:hover {
+    color: #007BFF;
+}
+
+/* Search input */
+#third-submenu input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+#third-submenu input[type="text"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Subcontent container */
+#subcontent {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+/* List-Users */
+  #search-result h3 {
+    /* Add some margin to the heading */
+    margin-top: 0;
+    /* Add some font styling */
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  #subcontent {
+    /* Add some padding to the subcontent */
+    padding: 20px;
+  }
+  
+  #data-list {
+    /* Add some styling to the table */
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #data-list th {
+    /* Add some styling to the table headers */
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  #data-list td {
+    /* Add some styling to the table data */
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  #data-list tr:nth-child(even) {
+    /* Add some alternating row colors */
+    background-color: #f9f9f9;
+  }
+  
+  #data-list tr:hover {
+    /* Add some hover effect to the rows */
+    background-color: #ccc;
+  }
+  
+  #data-list a {
+    /* Add some styling to the links */
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  #data-list a:hover {
+    /* Add some hover effect to the links */
+    color: #23527c;
+  }
+/* FORM */
+.input, select {
+  width: 100%;
+  padding: 23px 15px 7px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+input[type=submit] {
+  width: 20%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+input[type=submit]:hover {
+  background-color: #2980b9;
+  border-radius: 40px;
+  padding: 20px 15px;
+}
+textarea {
+  line-height: 1.5;
+  font-family: 'Assistant', sans-serif;
+    font-size: 20px;
+}
+#search-result{
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+}
+#form-block-center {
+  border-radius: 5px;
+  padding: 20px;
+    width: 40%;
+    margin: 0 auto;
+}
+h3{
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Playfair Display', serif;
+}
+p{
+  margin-bottom: 20px;
+  border-bottom: solid silver;
+}
+#form-block {
+  border-radius: 10px;
+  padding-left: 130px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+#form-block-half label{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+
+  
+}
+#form-block-half input{
+  width: 95%;
+
+
+}
+#form-block-half{
+    width: 50%;
+    float: left;
+    padding: 5px;  
+    display: inline;
+  }
+#button-block{
+    width: 50%;
+    padding: 5px;
+    margin-left: 300px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: .4s ease;
+}
+#button-block:hover{
+   color: crimson;
+  padding: 10px 20px;
+}
+.btn-box {
+  text-align: center; /* Center the buttons */
+  margin: 20px 0; /* Spacing around the button box */
+}
+
+.btn-jsactive {
+  display: inline-block; /* Make links behave like buttons */
+  color: #fff; /* White text color */
+  background-color: #35424a; /* Base button color */
+  text-decoration: none; /* Remove underline */
+  padding: 12px 20px; /* Padding for clickable area */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  margin: 0 5px; /* Margin for spacing between buttons */
+}
+
+.btn-jsactive:hover {
+  background-color: #1a5e8b; /* Darker background on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.btn-jsactive:active {
+  transform: translateY(1px); /* Push down effect when clicked */
+  box-shadow: none; /* Remove shadow on click */
+}
+.btn-jsactive i {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 1.1em; /* Adjust icon size if necessary */
+}
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Darker background */
+  animation: fadeIn 0.3s; /* Smooth fade-in effect */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #f9f9f9;
+  margin: 5% auto; /* Align in the middle */
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: scaleUp 0.3s ease-in-out; /* Smooth scale-up effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes scaleUp {
+  from {transform: scale(0.8);}
+  to {transform: scale(1);}
+}
+
+/* Hover Effect */
+.modal-content:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirmbtn {
+  background-color: #28a745; /* Green for Confirm */
+  color: white;
+}
+
+.confirmbtn:hover {
+  background-color: #218838;
+}
+
+.cancelbtn {
+  background-color: #dc3545; /* Red for Cancel */
+  color: white;
+}
+
+.cancelbtn:hover {
+  background-color: #c82333;
+}
+
+/* Modal Header */  
+.modal-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Modal Body */
+.modal p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Request */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* Basic styles for the map */
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+/* Additional styles as needed */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}

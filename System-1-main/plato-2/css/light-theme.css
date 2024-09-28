@@ -1,0 +1,18 @@
+/* assets/css/light-theme.css */
+
+/* Light theme styles for the map */
+#map {
+    height: 500px;
+    width: 100%;
+    border: 2px solid #ddd;
+}
+
+/* Background and text color for light theme */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+h1 {
+    color: #333;
+}
